@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Save Our Oceans</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .get-involved-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .involvement-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .involvement-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .involvement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .involvement-card .icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .involvement-card h3 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .involvement-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .involvement-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .involvement-card ul li {
+            color: #555;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .involvement-card ul li:before {
+            content: "✓ ";
+            color: #4ecdc4;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .join-button {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .join-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+        }
+
+        .volunteer-form {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .volunteer-form h2 {
+            color: #1e3c72;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4ecdc4;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #4ecdc4, #00a8cc);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .impact-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .impact-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .impact-item {
+            padding: 20px;
+        }
+
+        .impact-item .number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4ecdc4;
+            margin-bottom: 10px;
+        }
+
+        .impact-item .label {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .volunteer-form {
+                padding: 30px 20px;
+            }
+
+            .volunteer-form h2 {
+                font-size: 1.8rem;
+            }
+
+            .impact-section {
+                padding: 30px 20px;
+            }
+
+            .impact-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🌊</span>
+                <span class="logo-text">Save Our Oceans</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="get-involved.html" class="nav-link">Get Involved</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="get-involved-hero">
+            <div class="animated-bg"></div>
+            <div class="content">
+                <h1 class="main-title">Get Involved</h1>
+                <p class="subtitle">Join us in protecting our oceans and making a real difference</p>
+            </div>
+        </div>
+
+        <section class="involvement-options">
+            <div class="involvement-card">
+                <div class="icon">🤝</div>
+                <h3>Volunteer</h3>
+                <p>Join our team of dedicated volunteers working on beach cleanups, educational programs, and conservation projects.</p>
+                <ul>
+                    <li>Beach cleanup events</li>
+                    <li>Educational workshops</li>
+                    <li>Marine life monitoring</li>
+                    <li>Community outreach</li>
+                </ul>
+                <button class="join-button" onclick="scrollToForm()">Join Now</button>
+            </div>
+
+            <div class="involvement-card">
+                <div class="icon">💰</div>
+                <h3>Donate</h3>
+                <p>Your financial support helps fund research, conservation efforts, and educational programs that protect marine ecosystems.</p>
+                <ul>
+                    <li>Fund research projects</li>
+                    <li>Support cleanup initiatives</li>
+                    <li>Sponsor marine sanctuaries</li>
+                    <li>Education programs</li>
+                </ul>
+                <button class="join-button" onclick="alert('Donation system coming soon! Thank you for your interest.')">Donate</button>
+            </div>
+
+            <div class="involvement-card">
+                <div class="icon">📚</div>
+                <h3>Educate</h3>
+                <p>Help spread awareness about ocean conservation through social media, community events, and educational initiatives.</p>
+                <ul>
+                    <li>Share our mission</li>
+                    <li>Host awareness events</li>
+                    <li>School presentations</li>
+                    <li>Social media campaigns</li>
+                </ul>
+                <button class="join-button" onclick="alert('Check out our resources page for materials to share!')">Get Resources</button>
+            </div>
+
+            <div class="involvement-card">
+                <div class="icon">🏢</div>
+                <h3>Partner</h3>
+                <p>Join forces with us as a corporate or organizational partner to amplify our conservation impact.</p>
+                <ul>
+                    <li>Corporate sponsorships</li>
+                    <li>Joint initiatives</li>
+                    <li>Employee engagement</li>
+                    <li>Sustainable partnerships</li>
+                </ul>
+                <button class="join-button" onclick="alert('Contact us at partnerships@saveouroceans.org')">Partner With Us</button>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <h2>Your Impact Matters</h2>
+            <p style="color: white; font-size: 1.2rem; opacity: 0.9;">See what we've accomplished together with volunteers like you</p>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="number">5,000+</div>
+                    <div class="label">Active Volunteers</div>
+                </div>
+                <div class="impact-item">
+                    <div class="number">2,500</div>
+                    <div class="label">Cleanup Events</div>
+                </div>
+                <div class="impact-item">
+                    <div class="number">15M</div>
+                    <div class="label">Hours Contributed</div>
+                </div>
+                <div class="impact-item">
+                    <div class="number">100+</div>
+                    <div class="label">Countries Reached</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="volunteer-form">
+            <h2>🌊 Volunteer Sign-Up</h2>
+            <form id="volunteerForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <input type="text" id="location" name="location" required placeholder="City, Country">
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">Area of Interest *</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">Select an option</option>
+                        <option value="cleanup">Beach Cleanup</option>
+                        <option value="education">Education & Outreach</option>
+                        <option value="research">Marine Research</option>
+                        <option value="advocacy">Policy & Advocacy</option>
+                        <option value="events">Event Organization</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Previous Experience (Optional)</label>
+                    <textarea id="experience" name="experience" placeholder="Tell us about any relevant experience you have..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Why do you want to volunteer? *</label>
+                    <textarea id="message" name="message" required placeholder="Share your motivation..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Submit Application</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-icon">🌊</span>
+                    <span class="logo-text">Save Our Oceans</span>
+                </div>
+                <p class="footer-description">Dedicated to protecting marine life and preserving our oceans for future generations.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>📧 info@saveouroceans.org</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Ocean Drive, Marine City</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Save Our Oceans. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#privacy">Privacy Policy</a>
+                <span>|</span>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        function scrollToForm() {
+            document.querySelector('.volunteer-form').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Form submitted:', data);
+            
+            alert('🎉 Thank you for your interest in volunteering! We will contact you soon at ' + data.email);
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
