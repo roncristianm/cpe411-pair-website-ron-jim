@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Save Our Oceans</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .contact-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .contact-info-section {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info-section h2 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-info-section p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-details {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-details li {
+            padding: 20px;
+            margin-bottom: 20px;
+            background: rgba(30, 60, 114, 0.05);
+            border-radius: 12px;
+            font-size: 1.1rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-details li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-details li span {
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        .contact-form-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-form-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2a5298;
+            background: white;
+            box-shadow: 0 0 20px rgba(42, 82, 152, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(30, 60, 114, 0.4);
+        }
+
+        .map-section {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+        }
+
+        .map-section h2 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-placeholder::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.1) 10px,
+                rgba(255, 255, 255, 0.1) 20px
+            );
+            animation: wave 20s linear infinite;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info-section,
+            .contact-form-section,
+            .map-section {
+                padding: 30px;
+            }
+
+            .contact-info-section h2,
+            .contact-form-section h2,
+            .map-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🌊</span>
+                <span class="logo-text">Save Our Oceans</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="get-involved.html" class="nav-link">Get Involved</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="contact-hero">
+            <div class="animated-bg"></div>
+            <div class="content">
+                <h1 class="main-title">Contact Us</h1>
+                <p class="subtitle">Get in touch and let's work together to save our oceans</p>
+            </div>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info-section">
+                <h2>Get In Touch</h2>
+                <p>Have questions about our mission, want to volunteer, or need more information? We'd love to hear from you! Our team is dedicated to responding to all inquiries promptly.</p>
+                
+                <ul class="contact-details">
+                    <li>
+                        <span>📧</span>
+                        <div>
+                            <strong>Email:</strong><br>
+                            info@saveouroceans.org
+                        </div>
+                    </li>
+                    <li>
+                        <span>📞</span>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            +1 (555) 123-4567
+                        </div>
+                    </li>
+                    <li>
+                        <span>📍</span>
+                        <div>
+                            <strong>Address:</strong><br>
+                            123 Ocean Drive, Marine City
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="volunteer">Volunteer Opportunities</option>
+                            <option value="donation">Donations</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-icon">🌊</span>
+                    <span class="logo-text">Save Our Oceans</span>
+                </div>
+                <p class="footer-description">Dedicated to protecting marine life and preserving our oceans for future generations.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>📧 info@saveouroceans.org</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Ocean Drive, Marine City</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Save Our Oceans. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#privacy">Privacy Policy</a>
+                <span>|</span>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
