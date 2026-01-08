@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Save Our Oceans</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .about-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .mission-section {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+        }
+
+        .mission-section h2 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .mission-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .mission-item {
+            text-align: center;
+        }
+
+        .mission-item .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .mission-item h3 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .mission-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .story-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 60px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .story-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .story-section p {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .team-section {
+            margin-bottom: 60px;
+        }
+
+        .team-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .team-member {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member .avatar {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .team-member h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .team-member .role {
+            color: #4ecdc4;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-member p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .values-section {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+        }
+
+        .values-section h2 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            padding: 30px;
+            border-left: 4px solid #4ecdc4;
+            background: #f9f9f9;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateX(10px);
+            border-left-color: #1e3c72;
+        }
+
+        .value-card h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .mission-section,
+            .story-section,
+            .values-section {
+                padding: 40px 20px;
+            }
+
+            .mission-section h2,
+            .story-section h2,
+            .team-section h2,
+            .values-section h2 {
+                font-size: 2rem;
+            }
+
+            .story-section p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🌊</span>
+                <span class="logo-text">Save Our Oceans</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="get-involved.html" class="nav-link">Get Involved</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="about-hero">
+            <div class="animated-bg"></div>
+            <div class="content">
+                <h1 class="main-title">About Us</h1>
+                <p class="subtitle">Dedicated to protecting and preserving our ocean ecosystems</p>
+            </div>
+        </div>
+
+        <section class="mission-section">
+            <h2>Our Mission</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px;">
+                We are committed to safeguarding marine life and ocean ecosystems through conservation, education, and community action.
+            </p>
+            <div class="mission-content">
+                <div class="mission-item">
+                    <div class="icon">🛡️</div>
+                    <h3>Protect</h3>
+                    <p>Safeguarding marine habitats and endangered species from threats including pollution, overfishing, and climate change.</p>
+                </div>
+                <div class="mission-item">
+                    <div class="icon">📖</div>
+                    <h3>Educate</h3>
+                    <p>Raising awareness about ocean conservation through workshops, campaigns, and educational programs worldwide.</p>
+                </div>
+                <div class="mission-item">
+                    <div class="icon">🤝</div>
+                    <h3>Collaborate</h3>
+                    <p>Working with communities, governments, and organizations to create lasting positive change for our oceans.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section">
+            <h2>Our Story</h2>
+            <p>
+                Founded in 2015, Save Our Oceans began as a small group of marine biologists and environmentalists who shared a deep concern for the declining health of our ocean ecosystems. What started as local beach cleanups quickly grew into a global movement.
+            </p>
+            <p>
+                Today, we operate in over 100 countries with thousands of dedicated volunteers and partners. Our work spans from grassroots community initiatives to large-scale policy advocacy, all united by a single goal: to ensure healthy, thriving oceans for future generations.
+            </p>
+            <p>
+                Through innovative research, hands-on conservation projects, and educational outreach, we've removed millions of tons of plastic from our oceans, protected critical marine habitats, and inspired countless individuals to become ocean advocates.
+            </p>
+            <p>
+                But our work is far from over. With your support, we continue to push for stronger marine protection policies, expand our conservation efforts, and build a global community committed to ocean stewardship.
+            </p>
+        </section>
+
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar">👩‍🔬</div>
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p class="role">Executive Director</p>
+                    <p>Marine biologist with 20+ years of experience in ocean conservation and policy development.</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">👨‍💼</div>
+                    <h3>Michael Chen</h3>
+                    <p class="role">Operations Director</p>
+                    <p>Coordinates global initiatives and manages partnerships with conservation organizations worldwide.</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">👩‍🏫</div>
+                    <h3>Emily Rodriguez</h3>
+                    <p class="role">Education Coordinator</p>
+                    <p>Develops educational programs and outreach initiatives to inspire the next generation of ocean advocates.</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">👨‍🔬</div>
+                    <h3>Dr. James Williams</h3>
+                    <p class="role">Lead Researcher</p>
+                    <p>Conducts cutting-edge research on marine ecosystems and climate change impacts on ocean health.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>🌍 Sustainability</h3>
+                    <p>We promote practices that ensure the long-term health of ocean ecosystems and the communities that depend on them.</p>
+                </div>
+                <div class="value-card">
+                    <h3>🔬 Science-Based</h3>
+                    <p>Our conservation strategies are grounded in rigorous scientific research and evidence-based solutions.</p>
+                </div>
+                <div class="value-card">
+                    <h3>💙 Integrity</h3>
+                    <p>We operate with transparency, accountability, and ethical practices in all our conservation efforts.</p>
+                </div>
+                <div class="value-card">
+                    <h3>🌊 Inclusivity</h3>
+                    <p>We believe ocean conservation requires diverse voices and perspectives from communities around the world.</p>
+                </div>
+                <div class="value-card">
+                    <h3>⚡ Action-Oriented</h3>
+                    <p>We turn research and awareness into tangible results through hands-on conservation projects and advocacy.</p>
+                </div>
+                <div class="value-card">
+                    <h3>🤲 Community</h3>
+                    <p>We empower local communities to become stewards of their marine environments through education and support.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-icon">🌊</span>
+                    <span class="logo-text">Save Our Oceans</span>
+                </div>
+                <p class="footer-description">Dedicated to protecting marine life and preserving our oceans for future generations.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact">
+                    <li>📧 info@saveouroceans.org</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Ocean Drive, Marine City</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Save Our Oceans. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#privacy">Privacy Policy</a>
+                <span>|</span>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
