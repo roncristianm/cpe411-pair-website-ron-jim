@@ -4,7 +4,7 @@ document.getElementById('exploreBtn').addEventListener('click', function() {
     setTimeout(() => {
         this.style.transform = '';
     }, 150);
-    alert('Explore feature coming soon! 🚀');
+    alert('🌊 Join our ocean conservation efforts! Together we can make a difference!');
 });
 
 document.getElementById('learnBtn').addEventListener('click', function() {
@@ -12,7 +12,7 @@ document.getElementById('learnBtn').addEventListener('click', function() {
     setTimeout(() => {
         this.style.transform = '';
     }, 150);
-    alert('Learn More content coming soon! 📚');
+    alert('🐠 Discover how you can help protect marine life and our oceans!');
 });
 
 // Animate Feature Cards on Scroll
