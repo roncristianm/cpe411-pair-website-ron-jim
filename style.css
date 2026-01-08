@@ -395,17 +395,20 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
+    text-align: center;
 }
 
 .footer-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 }
 
 .footer-logo {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
@@ -484,6 +487,8 @@ body {
     flex-direction: column;
     gap: 12px;
     font-size: 0.95rem;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-contact li {
@@ -541,7 +546,11 @@ body {
     
     .footer-section:first-child {
         grid-column: 1 / -1;
+    }
+    
+    .footer-section {
         text-align: center;
+        align-items: center;
     }
     
     .footer-section:first-child .social-links {
@@ -603,8 +612,14 @@ body {
         grid-column: 1 / -1;
     }
     
+    .footer-section {
+        text-align: center;
+        align-items: center;
+    }
+    
     .footer-logo {
         font-size: 1.3rem;
+        justify-content: center;
     }
     
     .footer-section h4 {
@@ -633,6 +648,8 @@ body {
     
     .footer-section {
         gap: 15px;
+        text-align: center;
+        align-items: center;
     }
     
     .footer-section:first-child {
