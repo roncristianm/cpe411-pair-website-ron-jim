@@ -72,15 +72,6 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Add smooth parallax effect to hero section
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero-section');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
-
 // Add cursor trail effect
 document.addEventListener('mousemove', function(e) {
     const trail = document.createElement('div');
